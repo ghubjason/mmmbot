@@ -2,7 +2,7 @@ FROM alpine:3.4
 RUN apk update &&\
     apk upgrade &&\
     apk add build-base ansible docker git py-pip nodejs rsync zip &&\
-    apk add --update gcc libffi-dev python-dev openssl-dev &&\
+    apk add --update libffi-dev python-dev openssl-dev &&\
     npm install -g yo generator-hubot &&\
     adduser -u 497 -h /mmmbot -D hubot hubot &&\
     pip install awscli boto boto3 credstash virtualenv
